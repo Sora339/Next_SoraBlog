@@ -2,11 +2,6 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
-import dynamic from "next/dynamic";
-
-const Carousel = dynamic(() => import('./carousel'), {
-  ssr: false
-});
 
 const Profile = () => {
   //scriptを埋め込む処理
@@ -171,7 +166,6 @@ const Profile = () => {
   return (
     <div>
       <main className="mb-14">
-        <Carousel />
         <div className="">
           <div className="mr-72 ml-72 mb-14">
             <div className="text-left">
