@@ -23,14 +23,14 @@ const Carousel = ({ carousel_data }) => {
       >
         {carousel_data.carousel_img.map((content, index) => (
           <SplideSlide key={index}>
-            <Image
-              src={content.url}
-              alt="Hero"
-              className="object-contain w-full"
-              width={1000} // 画像の幅を指定
-              height={400} // 画像の高さを指定
-              priority
-            />
+              <Image
+                src={content.url}
+                alt="Hero"
+                className="object-contain w-full"
+                width={1000} // 画像の幅を指定
+                height={400} // 画像の高さを指定
+                priority
+              />
           </SplideSlide>
         ))}
       </Splide>
