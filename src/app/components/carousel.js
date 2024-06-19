@@ -25,9 +25,10 @@ const Carousel = async () => {
           type: "loop",
         }}
       >
-        {carousel_data.carousel_img.map((content) => (
-          <SplideSlide>
+        {carousel_data.carousel_img.map((content, index) => (
+          <SplideSlide key={index}>
             <Image
+              key={index}
               src={content.url}
               alt="Hero"
               fill
