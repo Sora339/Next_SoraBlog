@@ -9,11 +9,9 @@ const Carousel = ({ carousel_data }) => {
     <div className="mb-14">
       <Splide
         options={{
-          contain: true,
           heightRatio: 0.35,
           autoplay: true,
           interval: 3000,
-          speed: 1000,
           pauseOnFocus: false,
           pauseOnHover: false,
           pauseOnBlur: false,
