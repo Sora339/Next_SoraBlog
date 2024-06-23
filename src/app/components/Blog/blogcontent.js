@@ -6,25 +6,25 @@ const Blogcontent = ({ blogData }) => {
   return (
     <div>
       {blogData.contents.map((content) => (
-        <div key={content.id} className="pop">
-          <div className="text-left">
-            <h3 className="text-2xl font-nsjp font-medium">{content.title}</h3>
-            <p className="text-base font-nsjp font-normal mb-2">
+        <div key={content.id} className="pop mb-6">
+          <div className="text-left mb-4">
+            <h3 className="text-xl sm:text-2xl font-nsjp font-medium">{content.title}</h3>
+            <p className="text-sm sm:text-base font-nsjp font-normal">
               {new Date(content.createdAt).toLocaleDateString()}
             </p>
           </div>
-          <div className="w-full h-48 bg-slate-200 text-left p-4 mb-6 flex">
-            <div className="bg-white p-2 w-[255px]">
+          <div className="w-full h-auto bg-slate-200 text-left p-4 flex flex-col sm:flex-row">
+            <div className="bg-white p-2 w-full sm:w-[255px] mx-auto sm:mx-0">
               <Image
                 src={content.eyecatch.url}
                 alt={content.title}
-                className="h-full ml-auto mr-auto object-contain"
+                className="h-full object-contain"
                 width={content.eyecatch.width}
                 height={content.eyecatch.height}
               />
             </div>
             <div
-              className="ml-8 p-2 text-black"
+              className="mt-4 sm:mt-0 sm:ml-8 p-2 text-black"
               dangerouslySetInnerHTML={{ __html: content.content }}
             ></div>
           </div>

@@ -1,3 +1,4 @@
+import Header from "./components/header";
 import "./globals.css";
 import Head from "next/head";
 
@@ -24,31 +25,10 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/logo192.png" />
       </Head>
       <body className="bg-slate-800">
-        <header className="bg-slate-800 h-20 w-full p-0 pr-20 items-center flex">
-          <h1 className="text-white font-nsjp text-5xl font-bold mb-4 ml-6">
-            SoraBlog
-          </h1>
-          <div className="ml-auto mr-0 p-0 w-[24vw] flex justify-between">
-            <button id="worksscrollButton">
-              <h2 className="text-3xl font-nsjp font-semibold text-white">
-                Works
-              </h2>
-            </button>
-            <button id="contactscrollButton">
-              <h2 className="text-3xl font-nsjp font-semibold text-white">
-                Contact
-              </h2>
-            </button>
-            <button id="blogscrollButton">
-              <h2 className="text-3xl font-nsjp font-semibold text-white">
-                Blog
-              </h2>
-            </button>
-          </div>
-        </header>
+        <Header />
         {children}
         <footer className="text-center font-nsjp mb-8">
-          ©2024 SoraBrog All rights reserved.
+          ©2024 SoraBlog All rights reserved.
         </footer>
       </body>
     </html>
