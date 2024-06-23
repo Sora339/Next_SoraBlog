@@ -56,7 +56,7 @@ const ContactSection = () => {
 const ContactItem = ({ iconSrc, alt, platform, handle, url }) => {
   return (
     <div className="flex items-center">
-      <Image src={iconSrc} alt={alt} className="h-12 w-12" width="1000" height="500" />
+      <Image src={iconSrc} alt={alt} className="h-12 w-12" width="1000" height="500" priority/>
       <li className="ml-10 text-xl sm:text-2xl font-nsjp font-medium">
         {platform}：
         <a href={url} className="text-lg sm:text-xl">{handle}</a>

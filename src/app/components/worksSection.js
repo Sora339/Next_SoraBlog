@@ -17,7 +17,7 @@ const WorksSection = () => {
           </h2>
         </div>
         <div>
-          <div className="text-left">
+          <div className="text-left xl:ml-8">
             <WorkItem
               title="Movies"
               subtitle="動画作品"
@@ -123,7 +123,7 @@ const WorkItem = ({ title, subtitle, videoSrc, description, direction }) => {
       </div>
       <div
         className={`flex flex-col sm:flex-row items-center p-8 text-left ${
-          direction === "right" ? "justify-end" : ""
+          direction === "right" ? "justify-end xl:mr-8" : "xl:ml-8"
         }`}
       >
         <div className="h-56 w-80 mb-4 sm:mb-0">
