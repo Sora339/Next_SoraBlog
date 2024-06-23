@@ -149,7 +149,7 @@ const WorkItem = ({ title, subtitle, videoSrc, description, direction }) => {
 
 const SkillsSection = () => {
   return (
-    <div className="slide-in left text-left">
+    <div className="slide-in left text-left xl:ml-8">
       <div className="mr-8 mb-4">
         <h3 className="font-nsjp font-semibold text-4xl sm:text-5xl">Skills</h3>
         <h4 className="font-nsjp font-semibold text-lg sm:text-xl">使用技術</h4>
