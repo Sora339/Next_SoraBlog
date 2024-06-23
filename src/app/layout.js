@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
       </Head>
-      <body className={inter.className}>
+      <body className="bg-slate-800">
         <header className="bg-slate-800 h-20 w-full p-0 pr-20 items-center flex">
           <h1 className="text-white font-nsjp text-5xl font-bold mb-4 ml-6">
             SoraBlog

@@ -13,12 +13,15 @@ const Home = async () => {
     endpoint: "carousel",
     contentId: "first",
   });
+  const blog_data = await client.get({
+    endpoint: "blogs",
+  });
 
   return (
     <div>
       <Carousel carousel_data={carousel_data} />
       <Profile />
-      <Blogcontainer />
+      <Blogcontainer blogData={blog_data} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import Blogcontent from "./blogcontent";
 
-const Blogcontainer = () => {
+const Blogcontainer = ({ blogData }) => {
   return (
     <div>
       <div className=" mb-20">
@@ -15,7 +15,7 @@ const Blogcontainer = () => {
               <h2 className="text-2xl font-nsjp font-semibold mb-10">呟き</h2>
             </div>
             <div className="h-fit w-full items-center p-8 text-right ml-0">
-              <Blogcontent />
+              <Blogcontent blogData={blogData} />
             </div>
           </div>
         </div>
