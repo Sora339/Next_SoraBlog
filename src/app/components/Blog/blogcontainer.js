@@ -3,7 +3,7 @@ import Blogcontent from "./blogcontent";
 const Blogcontainer = ({ blogData }) => {
   return (
     <div>
-      <div className=" mb-20">
+      <div className="mb-20">
         <div className="mr-72 ml-72">
           <div className="text-center">
             <div

@@ -4,9 +4,9 @@ const Blogcontent = ({ blogData }) => {
   if (!blogData) return <div>Loading...</div>;
 
   return (
-    <div className="pop">
+    <div>
       {blogData.contents.map((content) => (
-        <div key={content.id}>
+        <div key={content.id} className="pop">
           <div className="text-left">
             <h3 className="text-2xl font-nsjp font-medium">{content.title}</h3>
             <p className="text-base font-nsjp font-normal mb-2">

@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SoraBlog",
@@ -25,13 +22,6 @@ export default function RootLayout({ children }) {
           content="Web site created using create next app"
         />
         <link rel="apple-touch-icon" href="/logo192.png" />
-        <link
-          rel="preload"
-          href="/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
       </Head>
       <body className="bg-slate-800">
         <header className="bg-slate-800 h-20 w-full p-0 pr-20 items-center flex">
