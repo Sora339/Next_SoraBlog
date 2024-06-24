@@ -9,6 +9,12 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMenuClick = (e, targetId) => {
+    e.preventDefault();
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="relative bg-slate-800 h-20 w-full p-4 flex items-center justify-between">
       <h1 className="text-white font-nsjp text-3xl sm:text-5xl font-bold">
@@ -46,17 +52,29 @@ const Header = () => {
           isMenuOpen ? "block" : "hidden"
         } sm:flex sm:items-center w-full sm:w-auto mr-8`}
       >
-        <button id="worksscrollButton" className="block mt-2 sm:mt-0 sm:ml-12">
+        <button
+          id="worksscrollButton"
+          className="block mt-2 sm:mt-0 sm:ml-12"
+          onClick={(e) => handleMenuClick(e, "works")}
+        >
           <h2 className="text-xl sm:text-3xl font-nsjp font-semibold text-white">
             Works
           </h2>
         </button>
-        <button id="contactscrollButton" className="block mt-2 sm:mt-0 sm:ml-12">
+        <button
+          id="contactscrollButton"
+          className="block mt-2 sm:mt-0 sm:ml-12"
+          onClick={(e) => handleMenuClick(e, "contact")}
+        >
           <h2 className="text-xl sm:text-3xl font-nsjp font-semibold text-white">
             Contact
           </h2>
         </button>
-        <button id="blogscrollButton" className="block mt-2 sm:mt-0 sm:ml-12">
+        <button
+          id="blogscrollButton"
+          className="block mt-2 sm:mt-0 sm:ml-12"
+          onClick={(e) => handleMenuClick(e, "blog")}
+        >
           <h2 className="text-xl sm:text-3xl font-nsjp font-semibold text-white">
             Blog
           </h2>
@@ -77,21 +95,21 @@ const Header = () => {
           <button
             id="worksscrollButton"
             className="text-2xl font-nsjp font-semibold text-white"
-            onClick={toggleMenu}
+            onClick={(e) => handleMenuClick(e, "works")}
           >
             Works
           </button>
           <button
             id="contactscrollButton"
             className="text-2xl font-nsjp font-semibold text-white"
-            onClick={toggleMenu}
+            onClick={(e) => handleMenuClick(e, "contact")}
           >
             Contact
           </button>
           <button
             id="blogscrollButton"
             className="text-2xl font-nsjp font-semibold text-white"
-            onClick={toggleMenu}
+            onClick={(e) => handleMenuClick(e, "blog")}
           >
             Blog
           </button>
