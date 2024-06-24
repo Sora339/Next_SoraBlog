@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-slate-800 h-20 w-full p-4 flex items-center justify-between">
+    <header className="relative bg-slate-800 h-20 w-full p-4 flex items-center justify-between">
       <h1 className="text-white font-nsjp text-3xl sm:text-5xl font-bold">
         SoraBlog
       </h1>
@@ -62,6 +62,41 @@ const Header = () => {
           </h2>
         </button>
       </nav>
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-10"
+          onClick={toggleMenu}
+        ></div>
+      )}
+      <div
+        className={`fixed inset-y-0 right-0 w-64 bg-slate-800 transform ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-20`}
+      >
+        <nav className="flex flex-col items-center justify-center h-full space-y-6">
+          <button
+            id="worksscrollButton"
+            className="text-2xl font-nsjp font-semibold text-white"
+            onClick={toggleMenu}
+          >
+            Works
+          </button>
+          <button
+            id="contactscrollButton"
+            className="text-2xl font-nsjp font-semibold text-white"
+            onClick={toggleMenu}
+          >
+            Contact
+          </button>
+          <button
+            id="blogscrollButton"
+            className="text-2xl font-nsjp font-semibold text-white"
+            onClick={toggleMenu}
+          >
+            Blog
+          </button>
+        </nav>
+      </div>
     </header>
   );
 };
