@@ -29,14 +29,7 @@ const Header = () => {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            ) : (
+            {!isMenuOpen && (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -47,11 +40,7 @@ const Header = () => {
           </svg>
         </button>
       </div>
-      <nav
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } sm:flex sm:items-center w-full sm:w-auto mr-8`}
-      >
+      <nav className={`hidden sm:flex sm:items-center w-full sm:w-auto mr-8`}>
         <button
           id="worksscrollButton"
           className="block mt-2 sm:mt-0 sm:ml-12"
@@ -91,6 +80,25 @@ const Header = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-20`}
       >
+        <button
+          onClick={toggleMenu}
+          className="absolute top-6 right-4 text-white focus:outline-none"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
         <nav className="flex flex-col items-center justify-center h-full space-y-6">
           <button
             id="worksscrollButton"
