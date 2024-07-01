@@ -72,7 +72,7 @@ const ContactItem = ({ iconSrc, alt, platform, handle, url }) => {
           height="500"
           priority
         />
-        <li className="ml-10 text-xl sm:text-2xl font-nsjp font-medium break-normal">
+        <li className="ml-10 text-xl sm:text-2xl font-nsjp font-medium break-normal w-full max-w-full">
           {platform}：{handle}
         </li>
       </div>
