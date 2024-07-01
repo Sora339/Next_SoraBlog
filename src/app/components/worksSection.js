@@ -72,11 +72,15 @@ const WorksSection = () => {
                 <>
                   <span className="font-medium text-2xl">ToryDory</span>
                   <br />
-                  ToDoリストの消化したタスクを使って日記を書くアプリ
+                  ToDoリストの消化したタスクを使って
+                  <br />
+                  日記を書くアプリ
                   <br />
                   FastAPIとMySQL、Dockerを使用
                   <br />
-                  直感的なUIとGeminiを使った日記生成機能がポイント
+                  Geminiを使った
+                  <br />
+                  日記生成機能がポイント
                   <br />
                   2年次の授業で個人開発
                 </>
@@ -92,6 +96,8 @@ const WorksSection = () => {
                   <span className="font-medium text-2xl">SoraBlog</span>
                   <br />
                   このページです！
+                  <br />
+                  Next.js、microCMS、
                   <br />
                   Splide、TailwindCSSを使用
                   <br />
@@ -134,6 +140,7 @@ const WorkItem = ({ title, subtitle, videoSrc, description, direction }) => {
               autoPlay
               muted
               loop
+              playsinline
             ></video>
           ) : (
             <div className="h-full w-full bg-slate-300"></div>
