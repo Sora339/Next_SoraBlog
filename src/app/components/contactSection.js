@@ -3,12 +3,12 @@ import Image from "next/image";
 const ContactSection = () => {
   return (
     <div className="container mx-auto px-4 mb-14">
-      <div className="text-left">
+      <div className="text-right">
         <div
           id="contact"
-          className="scroll-element1 bg-[#00a6ed] h-4 w-1/2 sm:w-[12vw] mb-2"
+          className="scroll-element3 ml-auto bg-[#00a6ed] h-4 w-1/2 sm:w-[12vw] mb-2"
         ></div>
-        <div className="scroll-element2">
+        <div className="scroll-element4">
           <h2 className="text-4xl sm:text-6xl font-nsjp font-semibold">
             Contact
           </h2>
@@ -16,8 +16,8 @@ const ContactSection = () => {
             SNS関係
           </h2>
         </div>
-        <div className="slide-in left flex flex-col p-8">
-          <ul className="list-disc space-y-4">
+        <div className="slide-in right flex flex-col p-8">
+          <ul className="space-y-4">
             <ContactItem
               iconSrc="/image/X_logo.svg"
               alt="X_logo"
@@ -64,6 +64,9 @@ const ContactItem = ({ iconSrc, alt, platform, handle, url }) => {
   return (
     <a href={url} className="text-lg sm:text-xl">
       <div className="flex items-center mb-6">
+        <li className="mr-10 text-xl sm:text-2xl font-nsjp font-medium break-normal w-full max-w-full">
+          {platform}：{handle}
+        </li>
         <Image
           src={iconSrc}
           alt={alt}
@@ -72,9 +75,6 @@ const ContactItem = ({ iconSrc, alt, platform, handle, url }) => {
           height="500"
           priority
         />
-        <li className="ml-10 text-xl sm:text-2xl font-nsjp font-medium break-normal w-full max-w-full">
-          {platform}：{handle}
-        </li>
       </div>
     </a>
   );

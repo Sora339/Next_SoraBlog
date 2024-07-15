@@ -7,7 +7,7 @@ import WorksSection from "./worksSection";
 
 const Profile = () => {
   return (
-    <div>
+    <div className="xl:mx-[240px]">
       <ProfileScript />
       <main className="mb-14">
         <ScrollIndicator />

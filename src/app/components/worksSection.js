@@ -21,7 +21,7 @@ const WorksSection = () => {
             <WorkItem
               title="Movies"
               subtitle="動画作品"
-              videoSrc="\image\PiedPiperMV完成.mp4"
+              videoSrc="https://www.youtube.com/embed/jb1r2aioXek?si=0SS8iI-B-N8Rlkpw&autoplay=1&mute=1&playsinline=1&loop=1&playlist=jb1r2aioXek"
               description={
                 <>
                   私が所属するサークル
@@ -42,7 +42,7 @@ const WorksSection = () => {
             <WorkItem
               title="Web"
               subtitle="ウェブ作品"
-              videoSrc="/image/2024-05-27 12-07-01.mp4"
+              videoSrc="https://www.youtube.com/embed/P4f8oHCgpM8?si=isrAvEgN2CLXdaQV&autoplay=1&mute=1&playsinline=1&loop=1&playlist=P4f8oHCgpM8"
               description={
                 <>
                   <span className="font-medium text-2xl">
@@ -128,20 +128,29 @@ const WorkItem = ({ title, subtitle, videoSrc, description, direction }) => {
         </h4>
       </div>
       <div
-        className={`flex flex-col sm:flex-row items-center p-8 text-left ${
+        className={`flex flex-col lg:flex-row items-center p-8 text-left ${
           direction === "right" ? "justify-end xl:mr-8" : "xl:ml-8"
         }`}
       >
-        <div className="h-56 w-80 mb-4 sm:mb-0">
+        <div className="h-48 w-80 mb-4 sm:mb-0">
           {videoSrc ? (
-            <video
-              src={videoSrc}
+            // <video
+            //   src={videoSrc}
+            //   className="h-full w-full"
+            //   autoPlay
+            //   muted
+            //   loop
+            //   playsinline
+            // ></video>
+            <iframe
               className="h-full w-full"
-              autoPlay
-              muted
-              loop
-              playsinline
-            ></video>
+              src={videoSrc}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           ) : (
             <div className="h-full w-full bg-slate-300"></div>
           )}
@@ -162,29 +171,33 @@ const SkillsSection = () => {
         <h4 className="font-nsjp font-semibold text-lg sm:text-xl">使用技術</h4>
       </div>
       <div className="ml-8">
-        <span className="text-lg sm:text-2xl font-nsjp font-medium">
-          映像制作
-        </span>
-        <ul className="list-disc mb-2">
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">
-            Davinch Resolve
-          </li>
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">
-            Affinity Designer 2/Photo 2/Public 2
-          </li>
-        </ul>
-        <span className="text-lg sm:text-2xl font-nsjp font-medium">
-          Web開発
-        </span>
-        <ul className="list-disc">
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">Python</li>
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">
-            HTML/CSS/JavaScript
-          </li>
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">React</li>
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">Next.js</li>
-          <li className="ml-10 text-lg sm:text-2xl font-nsjp">Figma</li>
-        </ul>
+        <div>
+          <span className="text-lg sm:text-2xl font-nsjp font-medium">
+            映像制作
+          </span>
+          <ul className="list-disc mb-4 xl:space-y-3 space-y-2 mt-2">
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">
+              Davinch Resolve
+            </li>
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">
+              Affinity Designer 2/Photo 2/Public 2
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span className="text-lg sm:text-2xl font-nsjp font-medium">
+            Web開発
+          </span>
+          <ul className="list-disc xl:space-y-3 space-y-2 mt-2">
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">Python</li>
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">
+              HTML/CSS/JavaScript
+            </li>
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">React</li>
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">Next.js</li>
+            <li className="ml-10 text-lg sm:text-2xl font-nsjp">Figma</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
