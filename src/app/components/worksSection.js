@@ -67,7 +67,7 @@ const WorksSection = () => {
             <WorkItem
               title=""
               subtitle=""
-              videoSrc=""
+              videoSrc="https://www.youtube.com/embed/3JM3uAIYAL4?si=h7qPw5Td18VC1W3J&autoplay=1&mute=1&playsinline=1&loop=1&playlist=3JM3uAIYAL4"
               description={
                 <>
                   <span className="font-medium text-2xl">ToryDory</span>
@@ -78,7 +78,7 @@ const WorksSection = () => {
                   <br />
                   FastAPIとMySQL、Dockerを使用
                   <br />
-                  Geminiを使った
+                  生成AI Geminiを使った
                   <br />
                   日記生成機能がポイント
                   <br />
@@ -90,7 +90,7 @@ const WorksSection = () => {
             <WorkItem
               title=""
               subtitle=""
-              videoSrc=""
+              videoSrc="https://www.youtube.com/embed/4UVb9Es6TIo?si=yl1Mrok0f5y2hliY&autoplay=1&mute=1&playsinline=1&loop=1&playlist=4UVb9Es6TIo"
               description={
                 <>
                   <span className="font-medium text-2xl">SoraBlog</span>
